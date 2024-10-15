@@ -22,12 +22,13 @@ h2 {
 }
 
 p {
-  color: #555;
+  color: #333;
 }
 
 /*********************************************************/
 /* Header */
 header {
+  top: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -93,9 +94,18 @@ header {
 
 /*********************************************************/
 
+main {
+  position: absolute;
+}
+
+section {
+  scroll-margin-top: 90px;
+  transition: all 0.5s linear;
+}
+
 /* Seção Hero */
 .hero {
-  margin-top: 200px;
+  margin-top: 90px;
   background-image: url(../img/pexels-olia-danilevich-4974916.jpg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -143,17 +153,83 @@ header {
   background-color: #e08d00;
 }
 
-/* Seção FAQ */
+/* Seção Sobre */
+
+.sobre,
+.programacao,
 .faq {
+  height: 90vh;
   padding: 50px 20px;
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; /* Cor de fundo */
+  text-align: center; /* Centraliza o título */
 }
 
+.sobre-container {
+  display: flex; /* Exibe os itens em linha */
+  justify-content: center; /* Centraliza o conteúdo */
+  align-items: center; /* Alinha o conteúdo no topo */
+  flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
+}
+
+.sobre-container img {
+  max-height: 40vh; /* Altura da imagem */
+  margin-right: 20px; /* Espaço à direita da imagem */
+}
+
+.sobre-container p,
+.sobre-contaner ementa,
+.sobre-container dias-aula {
+  max-width: 600px; /* Limita a largura máxima do texto */
+  margin: 0; /* Remove margens padrão */
+  font-size: 18px; /* Tamanho do texto */
+  display: flex;
+  justify-content: center;
+}
+
+.sobre h2,
+.programacao h2,
 .faq h2 {
   text-align: center;
   font-size: 36px;
   margin-bottom: 40px;
   color: #333;
+}
+
+/*Programação*/
+.programacao {
+  background-color: #f0a40089;
+}
+
+.programacao-container {
+  display: flex; /* Exibe os itens em linha */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: flex-start; /* Alinha itens ao topo */
+  flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
+}
+
+.programacao-container .ementa,
+.programacao-container .dias-aula {
+  flex: 1; /* Permite que os itens ocupem espaço proporcional */
+  margin: 10px; /* Espaçamento entre as colunas */
+  max-width: 400px; /* Limita a largura máxima */
+}
+
+.programacao-container h3 {
+  margin-top: 20px; /* Espaçamento acima do subtítulo */
+}
+
+.programacao-container ul {
+  list-style: none; /* Remove marcadores da lista */
+  padding: 0; /* Remove preenchimento */
+}
+
+.programacao-container ul li {
+  padding: 5px 0; /* Espaçamento entre os itens da lista */
+}
+/* Seção FAQ */
+.faq {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
 }
 
 .faq-container {
@@ -238,6 +314,26 @@ footer {
 
   .faq-item {
     flex: 1 1 100%; /* Cada item ocupará 100% da largura em telas pequenas */
+  }
+
+  .sobre-container {
+    flex-direction: column; /* Muda a direção para coluna em telas menores */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .sobre-container img {
+    margin-right: 0; /* Remove margem à direita da imagem */
+    margin-bottom: 20px; /* Espaço abaixo da imagem */
+  }
+
+  .programacao-container {
+    flex-direction: column; /* Muda a direção para coluna em telas menores */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .programacao-container .ementa,
+  .programacao-container .dias-aula {
+    max-width: 100%; /* Permite que ocupem 100% da largura */
   }
 }
 
