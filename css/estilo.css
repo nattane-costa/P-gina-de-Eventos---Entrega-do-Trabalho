@@ -71,14 +71,14 @@ header {
   color: #f0a500;
 }
 
-.hamburger-icon {
+.hamburger-icons {
   display: none;
   border: none;
   background: none;
   cursor: pointer;
 }
 
-.hamburger-icon i {
+.hamburger-icons i {
   color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
@@ -260,7 +260,7 @@ footer {
   }
 
   /* Exibir o ícone de hambúrguer */
-  .hamburger-icon {
+  .hamburger-icons {
     display: block;
   }
 
@@ -281,22 +281,21 @@ footer {
   .checkbox-toggle:checked ~ .nav-links {
     display: flex;
   }
+
+  .fa-x {
+    display: none !important;
+  }
   .fa-bars {
     display: inline-block;
   }
 
-  /* Alternar os ícones entre o hambúrguer e o X */
-  .fa-x {
-    display: none; /* O ícone X fica oculto por padrão ??*/
-  }
-
   /* Mostrar o ícone X quando o checkbox estiver marcado */
-  .checkbox-toggle:checked + .hamburger-icon .fa-x {
-    display: inline-block;
+  .checkbox-toggle:checked + .hamburger-icons .fa-x {
+    display: inline-block !important;
   }
 
   /* Ocultar o ícone de hambúrguer quando o checkbox estiver marcado */
-  .checkbox-toggle:checked + .hamburger-icon .fa-bars {
+  .checkbox-toggle:checked + .hamburger-icons .fa-bars {
     display: none;
   }
 }
