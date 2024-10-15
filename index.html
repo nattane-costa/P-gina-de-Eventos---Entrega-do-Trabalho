@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrega de Trabalho Final - Web I</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Barra de Navegação -->
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <h1>Trabalho Final 1.0</h1>
+        </div>
+        <input type="checkbox" id="dropdown" class="checkbox-toggle" />
+        <button class="hamburger-icon">
+          <label for="dropdown" class="hamburger-icon">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-x"></i>
+          </label>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#programacao">Programação</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Seção Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Entrega Oficial de Trabalhos versão 1.0</h2>
+        <p>
+          Participe da cerimônia oficial de entrega da versão 1.0 do trabalho
+          final da disciplina de Web I.
+        </p>
+        <a href="mailto: nattane.luiza@ifgoiano.edu.br" class="btn"
+          >Enviar Trabalho</a
+        >
+      </div>
+    </section>
+
+    <!-- Seção FAQ -->
+    <section class="faq" id="faq">
+      <h2>Perguntas Frequentes</h2>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <input type="checkbox" id="faq1" />
+          <label for="faq1">O que é a entrega de trabalho?</label>
+          <div class="faq-content">
+            <p>
+              A entrega de trabalho é um evento no qual os alunos apresentam
+              seus projetos finais, no formato de stands, com o objetivo de
+              compartilhar conhecimento e receber feedback. Além do evento em
+              si, o aluno deverá enviar o link do github para a professora.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input type="checkbox" id="faq2" />
+          <label for="faq2">Quem pode participar?</label>
+          <div class="faq-content">
+            <p>
+              Apenas os alunos do 4º período de SI matriculados na disciplina de
+              Web I podem participar.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input type="checkbox" id="faq3" />
+          <label for="faq3">Preciso me inscrever?</label>
+          <div class="faq-content">
+            <p>
+              Não, se você está matriculado na disciplina você está
+              automaticamente inscrito no evento.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <input type="checkbox" id="faq4" />
+          <label for="faq4"
+            >Eu não entendi o "versão 1.0". Pode me explicar?</label
+          >
+          <div class="faq-content">
+            <p>
+              A versão 1.0 é a versão inicial dos seus projetos construídos
+              apenas com HTML, CSS e JavaScript. No final da disciplina você
+              deverá realizar a entrega do trabalho final versão 2.0, que
+              contará com a implementação dos mesmos projetos utilizando
+              Angular.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2024 Entrega de Trabalho - Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>

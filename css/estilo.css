@@ -1,0 +1,312 @@
+/* Estilos Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+  color: #333;
+}
+
+p {
+  color: #555;
+}
+
+/*********************************************************/
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+/* Barra de Navegação */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo h1 {
+  color: #fff;
+  font-size: 24px;
+}
+
+/*Links de navegação*/
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f0a500;
+}
+
+.hamburger-icon {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.hamburger-icon i {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Esconder o checkbox */
+.checkbox-toggle {
+  display: none;
+}
+
+/*Ícone de Hamburguer*/
+
+/*********************************************************/
+
+/* Seção Hero */
+.hero {
+  margin-top: 200px;
+  background-image: url(../img/pexels-olia-danilevich-4974916.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero .hero-content {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px; /* Espaçamento interno para o conteúdo */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8); /* Sombra ao redor do contêiner */
+}
+
+.hero .hero-content h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero .hero-content p {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.hero .btn {
+  background-color: #f0a500;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #e08d00;
+}
+
+/* Seção FAQ */
+.faq {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.faq-container {
+  display: flex; /* Usar Flexbox para a estrutura de colunas */
+  flex-wrap: wrap; /* Permitir que os itens se movam para uma nova linha quando necessário */
+}
+
+.faq-item input {
+  display: none; /*para não mostrar o check*/
+}
+
+.faq-item label {
+  display: block;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.faq-item .faq-content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+
+.faq-item .faq-content p {
+  padding: 15px 0;
+  color: #333;
+}
+
+.faq-item {
+  flex: 1 1 45%; /* Cada item ocupará cerca de 45% da largura disponível */
+  /*grow shrink basis*/
+  margin: 5px; /* Espaçamento entre os itens */
+  background-color: #f0f0f0; /* Fundo branco para os itens */
+  border: 1px solid #ddd; /* Borda leve para os itens */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 10px; /* Espaçamento interno */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+/* Efeito de hover para os itens */
+.faq-item:hover {
+  background-color: #f0a500; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Estilização do conteúdo oculto */
+.faq-content {
+  max-height: 0; /* Ocultar conteúdo inicialmente */
+  overflow: hidden; /* Evitar que o conteúdo excedente apareça */
+  transition: max-height 0.3s ease; /* Transição suave ao expandir */
+}
+
+.faq-item input:checked ~ .faq-content {
+  max-height: 200px;
+  padding: 15px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .hero .hero-content h2 {
+    font-size: 36px;
+  }
+
+  .hero .hero-content p {
+    font-size: 18px;
+  }
+
+  .faq-item {
+    flex: 1 1 100%; /* Cada item ocupará 100% da largura em telas pequenas */
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    display: block;
+  }
+
+  .navbar {
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav-links li:hover {
+    color: black;
+    background-color: #f0a500;
+  }
+
+  .nav-links a:hover {
+    color: black;
+  }
+
+  /* Exibir o ícone de hambúrguer */
+  .hamburger-icon {
+    display: block;
+  }
+
+  /* Ocultar links de navegação por padrão */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  /* Exibir os links de navegação quando o checkbox estiver marcado */
+  .checkbox-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+  .fa-bars {
+    display: inline-block;
+  }
+
+  /* Alternar os ícones entre o hambúrguer e o X */
+  .fa-x {
+    display: none; /* O ícone X fica oculto por padrão ??*/
+  }
+
+  /* Mostrar o ícone X quando o checkbox estiver marcado */
+  .checkbox-toggle:checked + .hamburger-icon .fa-x {
+    display: inline-block;
+  }
+
+  /* Ocultar o ícone de hambúrguer quando o checkbox estiver marcado */
+  .checkbox-toggle:checked + .hamburger-icon .fa-bars {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .hero-content h2 {
+    font-size: 28px;
+  }
+
+  .hero .hero-content p {
+    font-size: 16px;
+  }
+}
